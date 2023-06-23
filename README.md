@@ -1,6 +1,3 @@
-# gcloud03
-Grupo03
-
 # Weather Data Collection
 
 ## QuickStart setup in the server side:
