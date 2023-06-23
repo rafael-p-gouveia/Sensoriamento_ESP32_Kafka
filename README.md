@@ -1,0 +1,1 @@
+# Sensoriamento_ESP32_Kafka
