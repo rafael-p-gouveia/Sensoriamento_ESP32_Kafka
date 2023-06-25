@@ -86,7 +86,7 @@ def run(kafka_consumer,mycol):
                 temperature_h_list_E2.append(float(remainder[1]))
                 humidity_h_list_E2.append(float(remainder[3]))
 
-            if time.time() >= now_time + 20: #wait an hour to remake the charts
+            if time.time() >= now_time + 3600: #wait an hour to remake the charts
 
                 if flag:
                     os.remove('temp_chart.png')
