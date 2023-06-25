@@ -4,20 +4,20 @@
 MY_PID=$!
 echo $MY_PID >> pids.txt
 echo "Primeiro comando executado"
-sleep 10
+sleep 40
 
 
 ~/kafka/kafka_2.13-3.4.0/bin/kafka-server-start.sh  ~/kafka/kafka_2.13-3.4.0/config/server.properties > /dev/null &
 MY_PID=$!
 echo $MY_PID >> pids.txt
 echo "Segundo comundo executado"
-sleep 40
+sleep 60
 
 python3 ~/kafka/mqtt_bridge/mqtt_kafka_bridge.py > /dev/null &
 MY_PID=$!
 echo $MY_PID >> pids.txt
 echo "Terceiro comando executado"
-sleep 10
+sleep 20
 
 
 sudo systemctl start mongod
@@ -26,5 +26,9 @@ echo "Quarto comando inicial"
 sleep 30
 
 python3 ~/mongoDB/kafka_consumidor_mongo.py > /dev/null &
+MY_PID=$!
+echo $MY_PID >> pids.txt
+
+python3 -m http.server 9041 &> /dev/null &
 MY_PID=$!
 echo $MY_PID >> pids.txt

@@ -5,7 +5,7 @@ sudo systemctl stop mongod
 file='pids.txt'
 while read line; do
 
-        kill $line
+	kill $line
 
 done < pids.txt
 
