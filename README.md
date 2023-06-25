@@ -17,7 +17,12 @@ Grupo03
   
   -paho-mqtt library
   
-  -pykafka
+  -pykafka library 
+
+  -datetime library
+
+  -matplotlib library
+  
   
 ### Easy Start:
    -Start all the Weather Data Collection enviroment by running the start_script.sh
